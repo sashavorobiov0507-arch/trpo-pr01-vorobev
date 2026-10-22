@@ -1,14 +1,167 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Технологии разработки ПО — Практическая работа 1</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Технологии разработки программного обеспечения</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="site-header">...</header>
-  <main>...</main>
-  <footer>...</footer>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#about" class="logo">Технологии разработки ПО</a>
+            <nav aria-label="Основная навигация">
+                <a href="#about">О курсе</a>
+                <a href="#tracks">Направления</a>
+                <a href="#schedule">Расписание</a>
+                <a href="#signup">Регистрация</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="about" class="hero">
+            <div class="container">
+                <h1>Технологии разработки программного обеспечения</h1>
+                <p>Практическая работа №1. HTML и базовая CSS-разметка.</p>
+            </div>
+        </section>
+        <section id="tracks">
+            <div class="container">
+                <h2>Направления</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>HTML</h3>
+                        <p class="card-category">Основа</p>
+                        <p>Структура и семантика документа</p>
+                        <strong>8</strong>
+                    </article>
+                    <article class="card">
+                        <h3>CSS</h3>
+                        <p class="card-category">Оформление</p>
+                        <p>Стили и адаптивность</p>
+                        <strong>9</strong>
+                    </article>
+                    <article class="card">
+                        <h3>Git</h3>
+                        <p class="card-category">Инструменты</p>
+                        <p>История изменений</p>
+                        <strong>7</strong>
+                    </article>
+                    <article class="card">
+                        <h3>Forms</h3>
+                        <p class="card-category">HTML</p>
+                        <p>Пользовательский ввод</p>
+                        <strong>6</strong>
+                    </article>
+                    <article class="card">
+                        <h3>Accessibility</h3>
+                        <p class="card-category">Качество</p>
+                        <p>Доступность интерфейса</p>
+                        <strong>10</strong>
+                    </article>
+                    <article class="card">
+                        <h3>DevTools</h3>
+                        <p class="card-category">Проверка</p>
+                        <p>Исследование DOM и стилей</p>
+                        <strong>8</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="schedule">
+            <div class="container">
+                <h2>Расписание</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Направление</th>
+                                <th scope="col">Категория</th>
+                                <th scope="col">Тема</th>
+                                <th scope="col">Оценка</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>HTML</td>
+                                <td>Основа</td>
+                                <td>Структура и семантика документа</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>CSS</td>
+                                <td>Оформление</td>
+                                <td>Стили и адаптивность</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>Git</td>
+                                <td>Инструменты</td>
+                                <td>История изменений</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>Forms</td>
+                                <td>HTML</td>
+                                <td>Пользовательский ввод</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>Accessibility</td>
+                                <td>Качество</td>
+                                <td>Доступность интерфейса</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>DevTools</td>
+                                <td>Проверка</td>
+                                <td>Исследование DOM и стилей</td>
+                                <td>8</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section id="signup">
+            <div class="container">
+                <h2>Регистрация</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" required minlength="2" maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Возраст</label>
+                        <input type="number" id="age" name="age" min="16" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="direction">Направление</label>
+                        <select id="direction" name="direction" required>
+                            <option value="">Выберите направление</option>
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="git">Git</option>
+                            <option value="forms">Forms</option>
+                            <option value="accessibility">Accessibility</option>
+                            <option value="devtools">DevTools</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Комментарий</label>
+                        <textarea id="message" name="message" minlength="10" maxlength="500" required></textarea>
+                    </div>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Практическая работа №1 · Технологии разработки программного обеспечения</p>
+    </footer>
 </body>
 </html>
